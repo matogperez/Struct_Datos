@@ -15,14 +15,22 @@ int main (void){
     racional n1, n2, nr;
     printf("\nDame el numerador de un número racional n1: ");
     scanf("%i", &n1.num);
-    printf("\nDame el denominador de un número racional n1: ");
-    scanf("%i", &n1.den);
+    do{
+        printf("\nDame el denominador de un número racional n1: ");
+        scanf("%i", &n1.den);
+        if(n1.den==0)
+            printf("\nEl 0 no es un denominador válido, pueba otra vez");}
+    while (n1.den==0);
     printf("\nDame el numerador de un número racional n2: ");
     scanf("%i", &n2.num);
-    printf("\nDame el denominador de un número racional n2: ");
-    scanf("%i", &n2.den);
+    do{
+        printf("\nDame el denominador de un número racional n2: ");
+        scanf("%i", &n2.den);
+        if(n1.den==0)
+            printf("\nEl 0 no es un denominador válido, pueba otra vez");}
+    while (n2.den==0);
 
-    printf("\n¿Qué deseas hacer? Si quieres sumar los números, oprime 1, si quieres restarlos oprime 2 y si quiere multiplicarlos, oprime 3: ");
+    printf("\n¿Qué deseas hacer? \nSi quieres sumar los números, oprime 1, \nSi quieres restarlos oprime 2 \nSi quiere multiplicarlos, oprime 3: ");
     scanf("%i", &opcion);
     if (opcion==3)
        nr=funcMult(n1,n2);
@@ -32,7 +40,6 @@ int main (void){
         nr=funcSuma(n1,n2);
     printf("El resultado de la operación es:\n%i\n__\n%i\n", nr.num,nr.den);
 }
-
 
 racional funcMult(racional r1,racional r2){
     racional rf;
