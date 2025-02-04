@@ -81,8 +81,15 @@ int barcosMac(int (*tablero)[SIZE]){
 	int i, j, w, x;
 	barco pa, acorazado, destructor1, destructor2, lanchita;
 		
-	barco conjunto={pa, acorazado, destructor1, destructor2, lanchita};
+	barco conjunto[5]={pa, acorazado, destructor1, destructor2, lanchita};
 	for(j=0;j<NUMBARCOS; j++){
-		for(i=0;i<
+		for(i=0;i<conjunto[j].tam;i++){
+            /*Falta por escribir el for para la matriz y lors rand para las coordenadas de los barcos, 
+            la dirección de los barcos y comprobar si caben o no en la matriz*/
+        }
+    }
+
+}
+		
 		
 	
