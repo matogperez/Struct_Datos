@@ -178,7 +178,7 @@ int barcosUsuario(int (*tablero)[SIZE], barco *conjunto){
 
 int comprobarBarcosMac(int (*tablero)[SIZE], int w, int x, int y, int l, int *z){
 
-    int i, m; //i es para iterar, m es para almacenar sumas y ret es el return de la funcón
+    int i, m=0; //i es para iterar, m es para almacenar sumas y ret es el return de la funcón
     if((tablero[x][y]==0)&&(w==0)){  //Si el barco avanza hacia la derecha ret=0, si avanza a la izquierda, ret=1
         if(x+l<SIZE){            //si avanza hacia abajo ret=2 y si avanza hacia abajo ret=3, hay que volver a intentar si return 4
             for(i=0;i<l;i++){
