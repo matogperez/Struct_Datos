@@ -49,7 +49,7 @@ typedef struct barco{
 	
 
 int llenarMatriz(int (*tablero)[SIZE]);
-//int barcosMac(int (*tablero)[SIZE], barco *conjunto);
+int barcosMac(int (*tablero)[SIZE], barco *conjunto);
 int comprobarBarcosMac(int (*tablero)[SIZE], int w, int x, int y, int l, int *z);
 int barcosUsuario(int (*tablero)[SIZE], barco *conjunto);
 
@@ -69,7 +69,7 @@ int main (void){
     cFunc=llenarMatriz(tableroUsuario);
     cFunc=llenarMatriz(radarUsuario);
     cFunc=llenarMatriz(tableroMac);
-    //cFunc=barcosMac(tableroMac, conjunto_m);
+    cFunc=barcosMac(tableroMac, conjunto_m);
     cFunc=barcosUsuario(tableroUsuario, conjunto_u);
 
     contadorHitM=0;
@@ -97,7 +97,7 @@ int llenarMatriz(int (*tablero)[SIZE]){
     return 0;
 }
 
-/*int barcosMac(int (*tablero)[SIZE], barco *conjunto){
+int barcosMac(int (*tablero)[SIZE], barco *conjunto){
 	
 	int i, j, k, m, w, x, y, z;
     
@@ -154,7 +154,7 @@ int llenarMatriz(int (*tablero)[SIZE]){
         printf("\n");
         }
     return 0;
-}*/
+}
 
 int barcosUsuario(int (*tablero)[SIZE], barco *conjunto){
 
